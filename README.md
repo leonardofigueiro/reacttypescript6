@@ -1,3 +1,9 @@
+Projeto desenvolvido no curso de React com typescript da escola Alura. 
+
+Trata-se de um sorteador de amigo secreto escrito em TDD.
+
+para ver em funcionamento: (https://amigo-secreto-hazel.vercel.app)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
