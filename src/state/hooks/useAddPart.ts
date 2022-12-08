@@ -11,6 +11,7 @@ export const useAddPart = () => {
             setTimeout(() => {
                 setError('')
             }, 5000)
+            return
         }
         return setList(atualList => [...atualList, participantName])
     }

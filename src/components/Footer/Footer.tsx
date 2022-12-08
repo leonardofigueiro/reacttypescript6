@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
-import { useListaDeParticipantes } from "../../state/hooks/useListaDeParticipante"
+import { useListaDeParticipantes } from "../../state/hooks/useListaDeParticipantes"
+import { useSorteador } from "../../state/hooks/useSorteador"
 
 
 
@@ -44,7 +45,9 @@ const Botao = styled.button`
 export default function Footer() {
     const participantes = useListaDeParticipantes()
     const navegarPara = useNavigate()
+    const sortear = useSorteador()
     const iniciar = () => {
+        sortear()
         navegarPara('/sorteio')
     }
     return (

@@ -1,4 +1,4 @@
-import { useListaDeParticipantes } from "../state/hooks/useListaDeParticipante"
+import { useListaDeParticipantes } from "../state/hooks/useListaDeParticipantes"
 
 export default function ListaParticipantes() {
     const participantes: string[] = useListaDeParticipantes()

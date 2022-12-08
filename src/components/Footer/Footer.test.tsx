@@ -1,18 +1,27 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import { RecoilRoot } from "recoil";
-import { useListaDeParticipantes } from "../../state/hooks/useListaDeParticipante";
+import { useListaDeParticipantes } from "../../state/hooks/useListaDeParticipantes";
+import { useSorteador } from "../../state/hooks/useSorteador";
 import Footer from "./Footer";
 
-jest.mock('../../state/hooks/useListaDeParticipante', () => {
+jest.mock('../../state/hooks/useListaDeParticipantes', () => {
     return {
         useListaDeParticipantes: jest.fn()
     }
 })
+
+
 const mockNavegacao = jest.fn()
+const mockSorteio = jest.fn()
 jest.mock('react-router-dom', () => {
     return {
         useNavigate: () => mockNavegacao
+    }
+})
+jest.mock('../../state/hooks/useSorteador', () => {
+    return {
+        useSorteador: () => mockSorteio
     }
 })
 
@@ -45,6 +54,7 @@ describe('Quando existem participantes suficientes', () => {
 
         expect(mockNavegacao).toHaveBeenCalledTimes(1)
         expect(mockNavegacao).toHaveBeenCalledWith('/sorteio')
+        expect(mockSorteio).toHaveBeenCalledTimes(1)
 
     })
 })
