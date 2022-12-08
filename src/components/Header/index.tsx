@@ -12,11 +12,11 @@ export default function Header() {
     }
 `;
     const Logo = styled.div`
-    background-image: url(${function (props) { return props.theme.images.bigLogo }});
+    background-image: url('imagens/logo.png');
     width: 351px;
     height: 117px;
     @media screen and (max-width: 800px) {
-        background-image: url(${function (props) { return props.theme.images.smallLogo }});
+        background-image: url('imagens/logo.png');
         width: 235px;
         height: 199px;
     }

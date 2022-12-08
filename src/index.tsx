@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Header from './components/Header';
+import Card from './components/Card/card'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header/>
+    <Header />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
